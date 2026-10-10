@@ -1,0 +1,72 @@
+{
+	"geode": "4.0.0",
+	"gd": {
+		"win": "*",
+		"android": "*",
+		"mac": "*",
+		"ios": "*"
+	},
+	"version": "v1.0.0",
+	"id": "karim.click-better",
+	"name": "Click Better",
+	"developer": "Karim",
+	"description": "Suara click saat klik dan suara release saat lepas. Mendukung clickpack kustom (termasuk ZCB3).",
+	"tags": ["utility", "customization"],
+	"settings": {
+		"enabled": {
+			"type": "bool",
+			"name": "Aktifkan Click Better",
+			"default": true
+		},
+		"pack": {
+			"type": "string",
+			"name": "Nama pack",
+			"description": "Nama folder pack di dalam folder config/packs. Contoh: ZCB3",
+			"default": "ZCB3"
+		},
+		"click-volume": {
+			"type": "float",
+			"name": "Volume click",
+			"default": 1.0,
+			"min": 0.0,
+			"max": 2.0,
+			"control": { "slider": true }
+		},
+		"release-volume": {
+			"type": "float",
+			"name": "Volume release",
+			"default": 0.8,
+			"min": 0.0,
+			"max": 2.0,
+			"control": { "slider": true }
+		},
+		"play-release": {
+			"type": "bool",
+			"name": "Mainkan suara release",
+			"default": true
+		},
+		"pitch-variation": {
+			"type": "float",
+			"name": "Variasi pitch acak",
+			"description": "0 = nada selalu sama. 0.05 = sedikit bervariasi biar natural.",
+			"default": 0.03,
+			"min": 0.0,
+			"max": 0.3,
+			"control": { "slider": true }
+		},
+		"soft-gap": {
+			"type": "float",
+			"name": "Batas spam (detik)",
+			"description": "Kalau jarak antar klik lebih cepat dari ini, pakai folder softclicks/softreleases (kalau ada).",
+			"default": 0.15,
+			"min": 0.0,
+			"max": 1.0,
+			"control": { "slider": true }
+		},
+		"player2": {
+			"type": "bool",
+			"name": "Juga bunyi untuk Player 2",
+			"default": false
+		}
+	}
+}
